@@ -1,9 +1,13 @@
 ### Java & Project Specific ###
-# Ignorar la carpeta de compilación (código binario que no se debe subir)
+# Ignorar binarios compilados y logs
 out/
 bin/
+*.class
+*.log
+*.tmp
 
 # PERMITIR explícitamente la carpeta de librerías externas
+# (Solo es necesario si en otro lugar bloqueaste *.jar, pero es buena práctica dejarlo explícito)
 !Lib/
 !Lib/*.jar
 
@@ -21,11 +25,7 @@ atlassian-ide-plugin.xml
 .DS_Store
 Thumbs.db
 
-### Temporary files ###
-*.log
-*.tmp
-
-.idea/
-*.iml
-out/
-gen/
+### Build Systems (Opcional pero recomendado) ###
+target/
+build/
+.gradle/
